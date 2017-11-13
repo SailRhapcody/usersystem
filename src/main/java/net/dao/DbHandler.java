@@ -25,7 +25,7 @@ public class DbHandler {
             con = DriverManager.getConnection(url, user, password);
             st = con.createStatement();
             java.sql.Date date = new java.sql.Date(Calendar.getInstance().getTime().getTime());
-            String s = "INSERT INTO PUBLIC.articles VALUES('" + articleModel.getArticleHeaderName() +
+            String s = "INSERT INTO PUBLIC.articles VALUES(DEFAULT, '" + articleModel.getArticleHeaderName() +
                     "','" + articleModel.getArticleThemeTags() + "','" + date + "');";
             rs = st.executeQuery(s);
 
